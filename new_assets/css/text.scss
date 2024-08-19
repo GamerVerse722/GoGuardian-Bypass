@@ -28,21 +28,22 @@ body {
     flex-wrap: nowrap;
     height: rem(50px);
 
-    button {
-        background-color: $button-color-light;
-        transition: all 0.25s ease;
-        padding: rem(9px) rem(13px);
-        border-radius: 0.25rem;
-        margin: 1rem 0.25rem;
-        white-space: nowrap;
-        font-size: 1rem;
-        border: none;
-    
-        &:hover {
-            cursor: pointer;
-            background-color: $button-color-dark;
-            padding: rem(9px) + rem($button-scale-size) rem(13px) + rem($button-scale-size);
-            font-size: 1rem + rem($button-scale-size);
-        }
+}
+
+button {
+    background-color: $button-color-light;
+    transition: all 0.25s ease;
+    padding: rem(9px) rem(13px);
+    border-radius: 0.25rem;
+    margin: 1rem 0.25rem;
+    white-space: nowrap;
+    font-size: 1rem;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $button-color-dark;
+        padding: rem(9px) + rem($button-scale-size) rem(13px) + rem($button-scale-size);
+        font-size: 1rem + rem($button-scale-size);
     }
 }
