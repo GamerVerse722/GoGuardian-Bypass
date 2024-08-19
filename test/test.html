@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<body>
+  <p id="demo"></p>
+  <p id="session"></p>
+  <script>
+    try {
+      localStorage.setItem("ChangedTitle", "null");
+      console.log("ChangedTitle: " + localStorage.getItem("ChangedTitle"));
+    } catch (err) {
+      document.getElementById("demo").innerHTML = err.message;
+      console.log("ChangedTitle: Error");
+    }
+    try {
+      sessionStorage.setItem("session", "null");
+      console.log("session: " + sessionStorage.getItem("session"));
+    } catch (err) {
+      document.getElementById("session").innerHTML = err.message;
+      console.log("session: Error");
+    }
+  </script>
+</body>

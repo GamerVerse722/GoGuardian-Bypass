@@ -1,0 +1,48 @@
+@use "sass:math";
+
+$button-color-light: #6c757d;
+$button-color-dark: #5c636a;
+$button-scale-size: 6px;
+
+@function rem($pxValue) {
+    @return math.div($pxValue, 16px) * 1rem;
+}
+
+@mixin default-text {
+    font-family: Quicksand, Arial, sans-serif;
+    color: white;
+}
+
+h1, h2, p, button {
+    @include default-text;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: rem(50px);
+
+    button {
+        background-color: $button-color-light;
+        transition: all 0.25s ease;
+        padding: rem(9px) rem(13px);
+        border-radius: 0.25rem;
+        margin: 1rem 0.25rem;
+        white-space: nowrap;
+        font-size: 1rem;
+        border: none;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: $button-color-dark;
+            padding: rem(9px) + rem($button-scale-size) rem(13px) + rem($button-scale-size);
+            font-size: 1rem + rem($button-scale-size);
+        }
+    }
+}
