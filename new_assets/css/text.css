@@ -9,6 +9,13 @@ h1, h2, p, button, a {
   color: white;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background-color: black;
 }
@@ -40,28 +47,45 @@ button:hover {
 
 header {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 0.9375rem 2.5%;
+  padding: 0.625rem 2%;
   background-color: #333;
+  justify-content: space-between;
 }
 
-.navbar {
-  list-style: none;
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.625rem 2%;
+  background-color: #333;
+  justify-content: flex-start;
 }
+
+.content {
+  flex: 1;
+}
+
 .navbar ul {
   display: flex;
+  flex-wrap: wrap;
 }
-.navbar li {
+.navbar ul li {
+  list-style: none;
   display: inline-block;
   padding: 0 1.25rem;
 }
-.navbar li a {
+.navbar a {
   display: block;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease;
+  text-wrap: nowrap;
 }
-.navbar li a:hover {
+.navbar a:hover {
   scale: 1.5;
+}
+.navbar a i {
+  padding: 0 0.3125rem;
 }/*# sourceMappingURL=text.css.map */

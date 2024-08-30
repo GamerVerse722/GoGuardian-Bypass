@@ -18,5 +18,13 @@ window.onload = function() {
     });
 
     hideAllSections();
-    content[0].style.display = 'block';
+    for (let i = 0; i < content.length; i++) {
+        if (window.location.hash == "") {
+            content[0].style.display = 'block';
+            break;
+        } else if (content[i].id == window.location.hash.slice(1)) {
+            content[i].style.display = 'block';
+            break;
+        }
+    }
 };

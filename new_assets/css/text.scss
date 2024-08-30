@@ -13,6 +13,14 @@ $button-scale-size: 6px;
     color: white;
 }
 
+@mixin top_bottom_navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: rem(10px) 2%;
+    background-color: #333;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,6 +29,13 @@ $button-scale-size: 6px;
 
 h1, h2, p, button, a {
     @include default-text;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -55,32 +70,44 @@ button {
 }
 
 header {
-    display: flex;
+    @include top_bottom_navbar;
     justify-content: space-between;
-    align-items: center;
-    padding: rem(15px) 2.5%;
-    background-color: #333;
+}
+
+footer {
+    @include top_bottom_navbar;
+    justify-content: flex-start;
+}
+
+.content {
+    flex: 1;
 }
 
 .navbar {
-    list-style: none;
     ul {
         display: flex;
+        flex-wrap: wrap;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 rem(20px);
+        }
     }
 
-    li {
-        display: inline-block;
-        padding: 0 rem(20px);
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        text-wrap: nowrap;
 
-        a {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            transition: all 0.25s ease;
+        &:hover {
+            scale: 1.5;
+        }
 
-            &:hover {
-                scale: 1.5;
-            }
+        i {
+            padding: 0 rem(5px);
         }
     }
 }
