@@ -58,7 +58,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: rem(15px) 10%;
+    padding: rem(15px) 2.5%;
     background-color: #333;
 }
 
@@ -76,6 +76,11 @@ header {
             display: block;
             text-align: center;
             text-decoration: none;
+            transition: all 0.25s ease;
+
+            &:hover {
+                scale: 1.5;
+            }
         }
     }
 }

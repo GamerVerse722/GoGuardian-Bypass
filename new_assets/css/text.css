@@ -42,7 +42,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.9375rem 10%;
+  padding: 0.9375rem 2.5%;
   background-color: #333;
 }
 
@@ -60,4 +60,8 @@ header {
   display: block;
   text-align: center;
   text-decoration: none;
+  transition: all 0.25s ease;
+}
+.navbar li a:hover {
+  scale: 1.5;
 }/*# sourceMappingURL=text.css.map */
