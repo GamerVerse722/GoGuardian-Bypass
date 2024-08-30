@@ -1,4 +1,10 @@
-h1, h2, p, button {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p, button, a {
   font-family: Quicksand, Arial, sans-serif;
   color: white;
 }
@@ -30,4 +36,28 @@ button:hover {
   background-color: #5c636a;
   padding: 0.9375rem 1.1875rem;
   font-size: 1.375rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem 10%;
+  background-color: #333;
+}
+
+.navbar {
+  list-style: none;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+.navbar li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }/*# sourceMappingURL=text.css.map */

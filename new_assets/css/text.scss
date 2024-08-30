@@ -13,7 +13,13 @@ $button-scale-size: 6px;
     color: white;
 }
 
-h1, h2, p, button {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p, button, a {
     @include default-text;
 }
 
@@ -45,5 +51,31 @@ button {
         background-color: $button-color-dark;
         padding: rem(9px) + rem($button-scale-size) rem(13px) + rem($button-scale-size);
         font-size: 1rem + rem($button-scale-size);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(15px) 10%;
+    background-color: #333;
+}
+
+.navbar {
+    list-style: none;
+    ul {
+        display: flex;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 rem(20px);
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
     }
 }
