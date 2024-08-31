@@ -5,14 +5,21 @@ window.onload = function() {
         });
     }
 
-    const navLinks = document.querySelectorAll('header .navbar div');
+    const navLinks = document.querySelectorAll('.navbar div');
     const content = document.querySelectorAll('content');
 
     navLinks.forEach(element => {
         element.addEventListener('click', () => {
             hideAllSections();
-            const selection = document.getElementById(element.getAttribute('data-link').split("#").slice(-1)[0]);
-            selection.style.display = 'block';
+            const site_link = element.getAttribute('data-link');
+            console.log(site_link.includes("https:"));
+            if (site_link.includes("https:")) {
+                window.open(site_link);
+                return;
+            } else {
+                const selection = document.getElementById(site_link.split("#").slice(-1)[0]);
+                selection.style.display = 'block';
+            }
 
         });
     });
