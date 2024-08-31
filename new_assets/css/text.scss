@@ -87,49 +87,22 @@ footer {
 }
 
 .navbar {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-        li {
-            list-style: none;
-            display: inline-block;
-            padding: 0 rem(20px);
-        }
-    }
-
-    a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        transition: all 0.25s ease;
+    div {
+        @include default-text;
+        margin: 0 rem(20px);
         text-wrap: nowrap;
+        transition: all 0.25s ease;
+
+        i {
+            padding-right: rem(5px);
+        }
 
         &:hover {
             scale: 1.5;
-        }
-
-        i {
-            padding: 0 rem(5px);
+            cursor: pointer;
         }
     }
-}
-
-.navbartest {
-    display: flex;
-    background-color: #333;
-    padding: 10px;
-    justify-content: space-around;
-}
-
-.nav-item {
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.nav-item:hover {
-    background-color: #555;
 }

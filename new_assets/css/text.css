@@ -69,44 +69,21 @@ footer {
   display: none;
 }
 
-.navbar ul {
+.navbar {
   display: flex;
   flex-wrap: wrap;
 }
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 0 1.25rem;
-}
-.navbar a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  text-wrap: nowrap;
-}
-.navbar a:hover {
-  scale: 1.5;
-}
-.navbar a i {
-  padding: 0 0.3125rem;
-}
-
-.navbartest {
-  display: flex;
-  background-color: #333;
-  padding: 10px;
-  justify-content: space-around;
-}
-
-.nav-item {
+.navbar div {
+  font-family: Quicksand, Arial, sans-serif;
   color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s;
+  margin: 0 1.25rem;
+  text-wrap: nowrap;
+  transition: all 0.25s ease;
 }
-
-.nav-item:hover {
-  background-color: #555;
+.navbar div i {
+  padding-right: 0.3125rem;
+}
+.navbar div:hover {
+  scale: 1.5;
+  cursor: pointer;
 }/*# sourceMappingURL=text.css.map */

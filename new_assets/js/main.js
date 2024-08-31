@@ -5,13 +5,13 @@ window.onload = function() {
         });
     }
 
-    const navLinks = document.querySelectorAll('.navbar ul li a');
+    const navLinks = document.querySelectorAll('header .navbar div');
     const content = document.querySelectorAll('content');
 
     navLinks.forEach(element => {
         element.addEventListener('click', () => {
             hideAllSections();
-            const selection = document.getElementById(element.href.split("#").slice(-1)[0]);
+            const selection = document.getElementById(element.getAttribute('data-link').split("#").slice(-1)[0]);
             selection.style.display = 'block';
 
         });
