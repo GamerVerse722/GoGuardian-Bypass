@@ -22,7 +22,7 @@ $button-scale-size: 6px;
 }
 
 * {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -81,6 +81,9 @@ footer {
 
 .content {
     flex: 1;
+    content {
+        display: none;
+    }
 }
 
 .navbar {
@@ -110,4 +113,23 @@ footer {
             padding: 0 rem(5px);
         }
     }
+}
+
+.navbartest {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.nav-item {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #555;
 }

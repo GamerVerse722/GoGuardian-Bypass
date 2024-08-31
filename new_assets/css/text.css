@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -66,6 +65,9 @@ footer {
 .content {
   flex: 1;
 }
+.content content {
+  display: none;
+}
 
 .navbar ul {
   display: flex;
@@ -88,4 +90,23 @@ footer {
 }
 .navbar a i {
   padding: 0 0.3125rem;
+}
+
+.navbartest {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.nav-item {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #555;
 }/*# sourceMappingURL=text.css.map */
