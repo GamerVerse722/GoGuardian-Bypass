@@ -19,7 +19,7 @@ footer {
   padding: 0;
 }
 
-h1, h2, p, button, a {
+h1, h2, p, button, a, label, select {
   font-family: Quicksand, Arial, sans-serif;
   color: white;
 }
@@ -98,4 +98,14 @@ button:hover {
 }
 .navbar div.active:hover::after {
   background-color: #8d8d8d;
+}
+
+select {
+  font-size: 1rem;
+  padding: 0.0625rem 0.25rem;
+  border-radius: 0.625rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  background-color: rgb(59, 59, 59);
+  border-color: #5c636a;
 }/*# sourceMappingURL=text.css.map */

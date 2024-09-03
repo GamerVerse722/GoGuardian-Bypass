@@ -35,7 +35,7 @@ footer {
     padding: 0;
 }
 
-h1, h2, p, button, a {
+h1, h2, p, button, a, label, select {
     @include default-text;
 }
 
@@ -119,4 +119,14 @@ button {
             background-color: $nav-hover-color;
         }
     }
+}
+
+select {
+    font-size: 1rem;
+    padding: rem(1px) rem(4px);
+    border-radius: rem(10px);
+    border-width: rem(2px);
+    border-style: solid;
+    background-color: rgb(59, 59, 59);
+    border-color: #5c636a;
 }
