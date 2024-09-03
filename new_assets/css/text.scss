@@ -104,13 +104,15 @@ button {
 
         &.active::after {
             content: "";
-            width: 100%;
-            height: rem(2px);
             background-color: white;
+            border-radius: 1rem;
             position: absolute;
-            left: 0;
-            bottom: rem(-2px);
-            transition: background-color 0.25s ease;
+            width: 110%;
+            height: rem(2px);
+            left: 50%;
+            bottom: rem(-3px);
+            transform: translateX(-50%);
+            transition: all 0.25s ease;
         }
 
         &.active:hover::after {

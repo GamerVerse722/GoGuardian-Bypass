@@ -86,13 +86,15 @@ button:hover {
 }
 .navbar div.active::after {
   content: "";
-  width: 100%;
-  height: 0.125rem;
   background-color: white;
+  border-radius: 1rem;
   position: absolute;
-  left: 0;
-  bottom: -0.125rem;
-  transition: background-color 0.25s ease;
+  width: 110%;
+  height: 0.125rem;
+  left: 50%;
+  bottom: -0.1875rem;
+  transform: translateX(-50%);
+  transition: all 0.25s ease;
 }
 .navbar div.active:hover::after {
   background-color: #8d8d8d;
