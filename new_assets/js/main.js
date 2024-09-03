@@ -1,37 +1,59 @@
-window.onload = function() {
+function getHash() {
+    return window.location.hash.slice(1);
+}
+
+function headerLinking() {
+    var navLinks = document.querySelectorAll('header div');
+    var content = document.querySelectorAll('content');
+
     function hideAllSections() {
         content.forEach(element => {
             element.style.display = 'none';
         });
-    }
 
-    const navLinks = document.querySelectorAll('.navbar div');
-    const content = document.querySelectorAll('content');
+        navLinks.forEach(element => {
+            element.className = '';
+        });
+    }
 
     navLinks.forEach(element => {
         element.addEventListener('click', () => {
+            var site_link = element.getAttribute('data-link');
+            
             hideAllSections();
-            const site_link = element.getAttribute('data-link');
-            console.log(site_link.includes("https:"));
-            if (site_link.includes("https:")) {
-                window.open(site_link);
-                return;
-            } else {
-                const selection = document.getElementById(site_link.split("#").slice(-1)[0]);
-                selection.style.display = 'block';
-            }
-
+            element.className = 'active';
+            window.location.hash = site_link;
+            document.getElementById(site_link).style.display = 'block';
         });
     });
 
-    hideAllSections();
-    for (let i = 0; i < content.length; i++) {
-        if (window.location.hash == "") {
-            content[0].style.display = 'block';
-            break;
-        } else if (content[i].id == window.location.hash.slice(1)) {
-            content[i].style.display = 'block';
-            break;
-        }
+    if (getHash() == "") {
+        content[0].style.display = 'block';
+        navLinks[0].className = 'active';
+        window.location.hash = 'home';
+
+    } else {
+        document.getElementById(getHash()).style.display = 'block';
+        navLinks.forEach(element => {
+            if (element.getAttribute('data-link') == getHash()) {
+                element.className = 'active';
+            }
+        });
     }
-};
+}
+
+function footerLinking() {
+    var navLinks = document.querySelectorAll('footer div');
+
+    navLinks.forEach(element => {
+        element.addEventListener('click', () => {
+            var site_link = element.getAttribute('data-link');
+            window.open(site_link);
+        });
+    });
+}
+
+window.onload = function() {
+    headerLinking();
+    footerLinking();
+}

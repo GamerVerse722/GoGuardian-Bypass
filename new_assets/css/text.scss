@@ -2,6 +2,7 @@
 
 $button-color-light: #6c757d;
 $button-color-dark: #5c636a;
+$nav-hover-color: #8d8d8d;
 $button-scale-size: 6px;
 
 @function rem($pxValue) {
@@ -13,7 +14,7 @@ $button-scale-size: 6px;
     color: white;
 }
 
-@mixin top_bottom_navbar {
+header, footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -21,8 +22,15 @@ $button-scale-size: 6px;
     background-color: #333;
 }
 
+header {
+    justify-content: space-between;
+}
+
+footer {
+    justify-content: flex-start;
+}
+
 * {
-    // box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -36,9 +44,6 @@ body, html {
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-
-body {
     background-color: black;
 }
 
@@ -69,16 +74,6 @@ button {
     }
 }
 
-header {
-    @include top_bottom_navbar;
-    justify-content: space-between;
-}
-
-footer {
-    @include top_bottom_navbar;
-    justify-content: flex-start;
-}
-
 .content {
     flex: 1;
     content {
@@ -92,17 +87,34 @@ footer {
 
     div {
         @include default-text;
+        position: relative;
         margin: 0 rem(20px);
         text-wrap: nowrap;
         transition: all 0.25s ease;
-
+        
         i {
             padding-right: rem(5px);
         }
 
         &:hover {
-            scale: 1.5;
+            scale: 1.2;
             cursor: pointer;
+            color: $nav-hover-color;
+        }
+
+        &.active::after {
+            content: "";
+            width: 100%;
+            height: rem(2px);
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: rem(-2px);
+            transition: background-color 0.25s ease;
+        }
+
+        &.active:hover::after {
+            background-color: $nav-hover-color;
         }
     }
 }
